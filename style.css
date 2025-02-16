@@ -25,7 +25,7 @@
     --font-size-m: 1.12rem;
     --font-size-l: 1.5rem;
     --font-size-xl: 2rem;
-    --font-size-xxl: 3.3rem;
+    --font-size-xxl: 2.3rem;
 
     /*Font weight*/
     --font-weight-normal: 400; 
@@ -51,7 +51,7 @@ a {
 } 
 
 button {
-    cursor: none;
+    cursor: pointer;
     border: none;
     background: none;
 }
@@ -70,7 +70,7 @@ header {
 
 header .navbar {
     display: flex;
-    padding: 15px;
+    padding: 20px;
     align-items: center;
     justify-content: space-between;
 }
@@ -98,12 +98,13 @@ header .navbar {
     color: var(--primary-color);
     background: var(--secondary-color);
 }
+
 .navbar .nav-logo .logo-text {
     color: var(--secondary-color);
     font-size: var(--font-size-xl);
     font-family: "Poppins", sans-serif;
     font-weight: var(--font-weight-semibold);
-}
+} 
 
 .hero-section {
     min-height: 100vh;
@@ -173,6 +174,12 @@ header .navbar {
 }
 
 @media screen  and (max-width:900px) { 
+    :root {
+        --fpont-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
     .navbar .nav-menu {
         display: block;
         position: fixed;
@@ -180,6 +187,17 @@ header .navbar {
         top: 0;
         width: 300px;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
         background: var(--white-color);
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: var(--dark-color);
+        display: block;
+        margin-top: 17px;
+        font-size: var(--font-size-l);
     }
 }
